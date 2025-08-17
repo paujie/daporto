@@ -11,6 +11,7 @@ import {
   DialogFooter,
   DialogClose,
 } from "@/components/ui/dialog";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { FiSmile } from "react-icons/fi";
 
 export function FinalProject() {
@@ -34,12 +35,19 @@ export function FinalProject() {
               Website ini dipersembahkan untuk Final Project Front-End Developer dari Coding Studio.
             </p>
           </div>
-          <DialogFooter>
-            <DialogClose asChild>
-              <Button type="button">
-                Oke
-              </Button>
-            </DialogClose>
+          <DialogFooter className="flex items-center w-full sm:justify-start">
+            <div className="flex items-center gap-x-2 w-full">
+              <Avatar>
+                <AvatarImage src="/codingstudio.png" alt="Coding Studio" />
+                <AvatarFallback>CS</AvatarFallback>
+              </Avatar>
+              <p className="text-xs font-semibold text-gray-500">Coding Studio</p>
+              <DialogClose asChild className="ml-auto">
+                <Button type="button">
+                  Mantap!
+                </Button>
+              </DialogClose>
+            </div>
           </DialogFooter>
         </DialogContent>
       </Dialog>
@@ -47,4 +55,4 @@ export function FinalProject() {
   );
 }
 
-export default FinalProject
+export default FinalProject;
