@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Jam from "@/components/ui/jam";
-import Credit from "@/components/ui/credit";
-import FinalProject from "@/components/ui/finalproject";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,10 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Jam />
         {children}
-        <Credit />
-        <FinalProject />
       </body>
     </html>
   );
